@@ -3,7 +3,7 @@ Learn Mocha [![Build Status](https://travis-ci.org/docdis/learn-mocha.png?branch
 
 *Quick Guide* to **mocha.js** Test Driven Development (TDD) in **node.js**
 
-> **Note**: This tutorial is an intro to Testing with Mocha. If you are looking for a more _detailed_ **T**est **D**riven **D**evelopment (**TDD**) Tutorial see: [https://github.com/nelsonic/**learn-tdd**](https://github.com/nelsonic/learn-tdd)
+> **Note**: This tutorial is an intro to Testing with Mocha. If you are looking for a more _detailed_ **T**est **D**riven **D**evelopment (**TDD**) Tutorial see: [https://github.com/dwyl/**learn-tdd**](https://github.com/dwyl/learn-tdd)
 
 ![Cowboy Coder](http://i.imgur.com/N0VqWcL.png "Cowboy Coder")
 
@@ -18,6 +18,8 @@ everything starts breaking ... "*it was working this morning*" ...
 
 
 ## Installation
+
+Assuming you're in a new directory
 
 ```sh
 npm install mocha -g --save-dev
