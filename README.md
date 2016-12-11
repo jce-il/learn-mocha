@@ -27,7 +27,7 @@ npm install mocha -g --save-dev
 
 You should see some output *confirming* it *installed*:
 
-![Mocha Installed](https://raw.github.com/nelsonic/learn-mocha/master/images/mocha-installed.png "Mocha Installed Successfully")
+![Mocha Installed](https://raw.github.com/j-il/learn-mocha/master/images/mocha-installed.png "Mocha Installed Successfully")
 
 More info: http://mochajs.org/#installation
 
@@ -71,7 +71,7 @@ will look for a **/test** directory and run any **.js** files it contains:
 mocha
 ```
 
-![Mocha 1 Test Passes](https://raw.github.com/nelsonic/learn-mocha/master/images/mocha-1-test-passing.png "Mocha 1 Test Passes")
+![Mocha 1 Test Passes](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-1-test-passing.png "Mocha 1 Test Passes")
 
 ### A More Useful TDD Example (Cash Register Mini Project)
 
@@ -90,8 +90,8 @@ Essentially we are building a *simple* **calculator** that *only does* **subtrac
 
 In the UK we have the following Notes & Coins:
 
-![GBP Notes](https://raw.github.com/nelsonic/learn-mocha/master/images/gbp-notes.jpg "GBP Notes")
-![GBP Coins](https://raw.github.com/nelsonic/learn-mocha/master/images/gbp-coins.jpg "GBP Coins")
+![GBP Notes](https://raw.github.com/jce-il/learn-mocha/master/images/gbp-notes.jpg "GBP Notes")
+![GBP Coins](https://raw.github.com/jce-il/learn-mocha/master/images/gbp-coins.jpg "GBP Coins")
 
 see: http://en.wikipedia.org/wiki/Banknotes_of_the_pound_sterling
 (technically there are also £100 and even £100,000,000 notes,
@@ -146,7 +146,7 @@ Back in your terminal window, re-run the **mocha** command and watch it *fail*:
 mocha
 ```
 
-![Mocha TFD Fail](https://raw.github.com/nelsonic/learn-mocha/master/images/mocha-tfd-cannot-find-module-first-fail.png "Mocha TFD Fail")
+![Mocha TFD Fail](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-tfd-cannot-find-module-first-fail.png "Mocha TFD Fail")
 
 This error ("**Cannot find module '../cash.js'**") is pretty self explanatory.
 We haven't created the file yet so test.js is requesting a non-existent file!
@@ -168,7 +168,7 @@ touch cash.js
 
 Re-run the **mocha** command in terminal, it will pass (*zero* tests)
 
-![Mocha Pass 0 Tests](https://raw.github.com/nelsonic/learn-mocha/master/images/mocha-0-passing.png "Mocha Pass 0 Tests")
+![Mocha Pass 0 Tests](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-0-passing.png "Mocha Pass 0 Tests")
 
 Lets add a test to ./test/**test.js** and watch it fail again:
 
@@ -187,7 +187,7 @@ describe('Cash Register', function(){
 ```
 Re-run `mocha`:
 
-![Mocha 1 Test Failing](https://raw.github.com/nelsonic/learn-mocha/master/images/mocha-first-test-failing.png "Mocha 1 Test Failing")
+![Mocha 1 Test Failing](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-first-test-failing.png "Mocha 1 Test Failing")
 
 #### Write *Just* Enough Code to Make the Test Pass
 
@@ -204,7 +204,7 @@ module.exports = C;            // export the module with a single method
 
 Re-run `mocha` (now it passes):
 
-![Mocha 1 Test Passes](https://raw.github.com/nelsonic/learn-mocha/master/images/mocha-1-test-pass.png "Mocha 1 Test Passes")
+![Mocha 1 Test Passes](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-1-test-pass.png "Mocha 1 Test Passes")
 
 
 #### Write A Real Test
@@ -232,7 +232,7 @@ it('getChange(210,300) should equal [50,20,20]', function(){
 **Note**: use assert.**deepEqual** for arrays
 see: http://stackoverflow.com/questions/13225274/
 
-![Mocha Assertion Error](https://raw.github.com/nelsonic/learn-mocha/master/images/mocha-assertionError.png "Mocha Assertion Error")
+![Mocha Assertion Error](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-assertionError.png "Mocha Assertion Error")
 
 #### Write the Method to Pass the Test
 
@@ -247,7 +247,7 @@ C.getChange = function (totalPayable, cashPaid) {
 
 This will pass:
 
-![Mocha Passing](https://raw.github.com/nelsonic/learn-mocha/master/images/mocha-2-passing.png "Mocha 2 Passing")
+![Mocha Passing](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-2-passing.png "Mocha 2 Passing")
 
 This only works *once*. When the Spec (Test) Writer writes the next test, the method will need
 to be re-written to satisfy it.
@@ -270,7 +270,7 @@ it('getChange(486,1000) should equal [500, 10, 2, 2]', function(){
 
 As expected, our lazy method fails:
 
-![Mocha 3 Test Fails](https://raw.github.com/nelsonic/learn-mocha/master/images/mocha-2-passing-1-fail.png "Mocha 3rd Test Fails")
+![Mocha 3 Test Fails](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-2-passing-1-fail.png "Mocha 3rd Test Fails")
 
 #### Keep Cheating or Solve the Problem?
 
@@ -287,7 +287,7 @@ C.getChange = function (totalPayable, cashPaid) {
 ```
 The *Arthur Andersen Approach* gets results:
 
-![Mocha 3 Passing](https://raw.github.com/nelsonic/learn-mocha/master/images/mocha-3-passing.png "Mocha 3 Passing")
+![Mocha 3 Passing](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-3-passing.png "Mocha 3 Passing")
 
 But its arguably *more work* than simply *solving* the problem.
 Lets do that instead.
@@ -333,7 +333,7 @@ it('getChange(1487,10000) should equal [5000, 2000, 1000, 500, 10, 2, 1 ]', func
 });
 ```
 
-![Mocha 4 Passing](https://raw.github.com/nelsonic/learn-mocha/master/images/mocha-4-tests-passing.png "Mocha 4 Passing")
+![Mocha 4 Passing](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-4-tests-passing.png "Mocha 4 Passing")
 
 
 - - -
@@ -344,7 +344,7 @@ it('getChange(1487,10000) should equal [5000, 2000, 1000, 500, 10, 2, 1 ]', func
 
 We are using istanbul for code coverage.
 If you are new to istanbul check out my brief tutorial:
-https://github.com/nelsonic/learn-istanbul
+https://github.com/dwyl/learn-istanbul
 
 Install istanbul:
 
@@ -358,11 +358,11 @@ istanbul cover _mocha -- -R spec
 ```
 You should see:
 
-![Istanbul Coverage](https://raw.github.com/nelsonic/learn-mocha/master/images/istanbul-cover-mocha.png "Istanbul Code Coverage")
+![Istanbul Coverage](https://raw.github.com/jce-il/learn-mocha/master/images/istanbul-cover-mocha.png "Istanbul Code Coverage")
 
 or if you prefer the **lcov-report**:
 
-![Istanbul Coverage Report](https://raw.github.com/nelsonic/learn-mocha/master/images/istanbul-coverage-report.png "Istanbul Code Coverage Report")
+![Istanbul Coverage Report](https://raw.github.com/jce-il/learn-mocha/master/images/istanbul-coverage-report.png "Istanbul Code Coverage Report")
 
 > **100% Coverage** for Statements, Branches, Functions and Lines.
 
@@ -370,12 +370,12 @@ or if you prefer the **lcov-report**:
 #### Travis
 
 If you are new to Travis CI check out my tutorial:
-https://github.com/nelsonic/learn-travis
+https://github.com/dwyl/learn-travis
 
 > Visit: https://travis-ci.org/profile
 > Enable Travis for learn-travis project
 
-![Travis Enabled](https://raw.github.com/nelsonic/learn-mocha/master/images/travis-on.png "Travis Enabled")
+![Travis Enabled](https://raw.github.com/jce-il/learn-mocha/master/images/travis-on.png "Travis Enabled")
 
 Done. [![Travis Build Status](https://travis-ci.org/docdis/learn-mocha.svg)](https://travis-ci.org/docdis/learn-mocha)
 
@@ -388,7 +388,7 @@ Done. [![Travis Build Status](https://travis-ci.org/docdis/learn-mocha.svg)](htt
 Mocha is a **JavaScript test framework** running on **node.js**
 *and* the **browser**.
 
-![Mocha Logo](https://raw.github.com/nelsonic/learn-mocha/master/images/mocha-logo.png "Mocha Logo")
+![Mocha Logo](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-logo.png "Mocha Logo")
 
 Made by [TJ Holowaychuk](https://twitter.com/tjholowaychuk) creator of
 [Express](https://github.com/visionmedia/express) (*by far* the *most popular*
