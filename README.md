@@ -3,7 +3,7 @@ Learn Mocha [![Build Status](https://travis-ci.org/docdis/learn-mocha.png?branch
 
 *Quick Guide* to **mocha.js** Test Driven Development (TDD) in **node.js**
 
-> **Note**: This tutorial is an intro to Testing with Mocha. If you are looking for a more _detailed_ **T**est **D**riven **D**evelopment (**TDD**) Tutorial see: [https://github.com/dwyl/**learn-tdd**](https://github.com/dwyl/learn-tdd)
+> **Note**: This tutorial is an intro to Testing with Mocha. It is a fork of [https://github.com/dwyl/**learn-mocha**](https://github.com/dwyl/learn-mocha) adapted as an excercise for a software [engineering course](https://github.com/jce-il/se-class/wiki). If you are looking for a more _detailed_ **T**est **D**riven **D**evelopment (**TDD**) Tutorial see: [https://github.com/dwyl/**learn-tdd**](https://github.com/dwyl/learn-tdd)
 
 ![Cowboy Coder](http://i.imgur.com/N0VqWcL.png "Cowboy Coder")
 
@@ -27,7 +27,7 @@ npm install mocha -g --save-dev
 
 You should see some output *confirming* it *installed*:
 
-![Mocha Installed](https://raw.github.com/j-il/learn-mocha/master/images/mocha-installed.png "Mocha Installed Successfully")
+![Mocha Installed](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-installed.png "Mocha Installed Successfully")
 
 More info: http://mochajs.org/#installation
 
