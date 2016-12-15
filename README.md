@@ -3,7 +3,19 @@ Learn Mocha [![Build Status](https://travis-ci.org/docdis/learn-mocha.png?branch
 
 *Quick Guide* to **mocha.js** Test Driven Development (TDD) in **node.js**
 
-> **Note**: This tutorial is an intro to Testing with Mocha. It is a fork of [https://github.com/dwyl/**learn-mocha**](https://github.com/dwyl/learn-mocha) adapted as an excercise for a software [engineering course](https://github.com/jce-il/se-class/wiki). If you are looking for a more _detailed_ **T**est **D**riven **D**evelopment (**TDD**) Tutorial see: [https://github.com/dwyl/**learn-tdd**](https://github.com/dwyl/learn-tdd)
+> **Note**: This tutorial is an intro to Testing with Mocha. It is a fork of [https://github.com/dwyl/**learn-mocha**](https://github.com/dwyl/learn-mocha) adapted as an excercise for a software [engineering course](https://github.com/jce-il/se-class/wiki).
+
+For students: follow these steps:
+- Fork your own copy of this toutorial (using the classroom invitation)
+- Clone localy
+- Follow this tutorial, while commiting your work for every step.
+- In the commit messages use a prefix of "RED", "GREEN", or "REFACTOR" according to the step, e.g. "RED:a failing test for missing module
+- There are colored circle hints following the various steps - ![RED](https://raw.github.com/jce-il/learn-mocha/master/images/red-circle-icon.png "RED") ![GREEN](https://raw.github.com/jce-il/learn-mocha/master/images/green-circle-icon.png "GREEN") ![REFACTOR](https://raw.github.com/jce-il/learn-mocha/master/images/blue-circle-icon.png "REFACTOR")
+- Finally, push your commits back to your github repository
+
+If you are looking for a more _detailed_ **T**est **D**riven **D**evelopment (**TDD**) Tutorial see: [https://github.com/dwyl/**learn-tdd**](https://github.com/dwyl/learn-tdd)
+
+
 
 ![Cowboy Coder](http://i.imgur.com/N0VqWcL.png "Cowboy Coder")
 
