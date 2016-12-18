@@ -8,7 +8,7 @@ Learn Mocha [![Build Status](https://travis-ci.org/docdis/learn-mocha.png?branch
 For students: follow these steps:
 - Fork your own copy of this toutorial (using the classroom invitation)
 - Clone localy
-- Follow this tutorial, while commiting your work for every step.
+- Follow this tutorial, while commiting your work right after every step.
 - In the commit messages use a prefix of "RED", "GREEN", or "REFACTOR" according to the step, e.g. "RED:a failing test for missing module
 - There are colored circle hints following the various steps - ![RED](https://raw.github.com/jce-il/learn-mocha/master/images/red-circle-icon.png "RED") ![GREEN](https://raw.github.com/jce-il/learn-mocha/master/images/green-circle-icon.png "GREEN") ![REFACTOR](https://raw.github.com/jce-il/learn-mocha/master/images/blue-circle-icon.png "REFACTOR")
 - Finally, push your commits back to your github repository
@@ -167,6 +167,7 @@ We haven't created the file yet so test.js is requesting a non-existent file!
 > **A**: To get used to the idea of *only* writing the code required to *pass*
 >    the *current* (*failing*) *test*.
 
+![RED](https://raw.github.com/jce-il/learn-mocha/master/images/red-circle-icon.png "RED")
 
 #### Create the Module File
 
@@ -181,6 +182,8 @@ touch cash.js
 Re-run the **mocha** command in terminal, it will pass (*zero* tests)
 
 ![Mocha Pass 0 Tests](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-0-passing.png "Mocha Pass 0 Tests")
+
+![GREEN](https://raw.github.com/jce-il/learn-mocha/master/images/green-circle-icon.png "GREEN")
 
 Lets add a test to ./test/**test.js** and watch it fail again:
 
@@ -201,6 +204,8 @@ Re-run `mocha`:
 
 ![Mocha 1 Test Failing](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-first-test-failing.png "Mocha 1 Test Failing")
 
+![RED](https://raw.github.com/jce-il/learn-mocha/master/images/red-circle-icon.png "RED")
+
 #### Write *Just* Enough Code to Make the Test Pass
 
 Add the following to **cash.js**:
@@ -218,6 +223,7 @@ Re-run `mocha` (now it passes):
 
 ![Mocha 1 Test Passes](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-1-test-pass.png "Mocha 1 Test Passes")
 
+![GREEN](https://raw.github.com/jce-il/learn-mocha/master/images/green-circle-icon.png "GREEN")
 
 #### Write A Real Test
 
@@ -246,6 +252,8 @@ see: http://stackoverflow.com/questions/13225274/
 
 ![Mocha Assertion Error](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-assertionError.png "Mocha Assertion Error")
 
+![RED](https://raw.github.com/jce-il/learn-mocha/master/images/red-circle-icon.png "RED")
+
 #### Write the Method to Pass the Test
 
 What if I cheat?
@@ -260,6 +268,8 @@ C.getChange = function (totalPayable, cashPaid) {
 This will pass:
 
 ![Mocha Passing](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-2-passing.png "Mocha 2 Passing")
+
+![GREEN](https://raw.github.com/jce-il/learn-mocha/master/images/green-circle-icon.png "GREEN")
 
 This only works *once*. When the Spec (Test) Writer writes the next test, the method will need
 to be re-written to satisfy it.
@@ -284,6 +294,8 @@ As expected, our lazy method fails:
 
 ![Mocha 3 Test Fails](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-2-passing-1-fail.png "Mocha 3rd Test Fails")
 
+![RED](https://raw.github.com/jce-il/learn-mocha/master/images/red-circle-icon.png "RED")
+
 #### Keep Cheating or Solve the Problem?
 
 We could keep cheating by writing a series of if statements:
@@ -300,6 +312,8 @@ C.getChange = function (totalPayable, cashPaid) {
 The *Arthur Andersen Approach* gets results:
 
 ![Mocha 3 Passing](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-3-passing.png "Mocha 3 Passing")
+
+![GREEN](https://raw.github.com/jce-il/learn-mocha/master/images/green-circle-icon.png "GREEN")
 
 But its arguably *more work* than simply *solving* the problem.
 Lets do that instead.
@@ -329,6 +343,7 @@ C.getChange = function (totalPayable, cashPaid) {
     return change;
 };
 ```
+![REFACTOR](https://raw.github.com/jce-il/learn-mocha/master/images/blue-circle-icon.png "REFACTOR")
 
 Add one more test to ensure we are *fully* exercising our method:
 
@@ -347,15 +362,20 @@ it('getChange(1487,10000) should equal [5000, 2000, 1000, 500, 10, 2, 1 ]', func
 
 ![Mocha 4 Passing](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-4-tests-passing.png "Mocha 4 Passing")
 
+![GREEN](https://raw.github.com/jce-il/learn-mocha/master/images/green-circle-icon.png "GREEN")
+
+#### Test readability
+
+Our tests are also code and are starting to get messy, suggest an improvement to the test code (comments, meaningful names, separating into classes of inputs, etc.)
+
+![REFACTOR](https://raw.github.com/jce-il/learn-mocha/master/images/blue-circle-icon.png "REFACTOR")
 
 - - -
-
-### Bonus Level
 
 #### Code Coverage
 
 We are using istanbul for code coverage.
-If you are new to istanbul check out my brief tutorial:
+If you are new to istanbul check out the brief tutorial:
 https://github.com/dwyl/learn-istanbul
 
 Install istanbul:
@@ -378,6 +398,8 @@ or if you prefer the **lcov-report**:
 
 > **100% Coverage** for Statements, Branches, Functions and Lines.
 
+Commit the report, also.
+![REFACTOR](https://raw.github.com/jce-il/learn-mocha/master/images/blue-circle-icon.png "REFACTOR")
 
 #### Travis
 
@@ -385,11 +407,11 @@ If you are new to Travis CI check out my tutorial:
 https://github.com/dwyl/learn-travis
 
 > Visit: https://travis-ci.org/profile
-> Enable Travis for learn-travis project
+> Enable Travis for your project
 
 ![Travis Enabled](https://raw.github.com/jce-il/learn-mocha/master/images/travis-on.png "Travis Enabled")
 
-Done. [![Travis Build Status](https://travis-ci.org/docdis/learn-mocha.svg)](https://travis-ci.org/docdis/learn-mocha)
+Done. [![Travis Build Status](https://travis-ci.org/jce-il/learn-mocha.svg)](https://travis-ci.org/docdis/learn-mocha)
 
 - - -
 
