@@ -1,7 +1,7 @@
-Learn Mocha [![Build Status](https://travis-ci.org/docdis/learn-mocha.png?branch=master)](https://travis-ci.org/docdis/learn-mocha) [![Test Coverage](https://codeclimate.com/github/docdis/learn-mocha/badges/coverage.svg)](https://codeclimate.com/github/docdis/learn-mocha/coverage) [![Code Climate](https://codeclimate.com/github/docdis/learn-mocha.png)](https://codeclimate.com/github/docdis/learn-mocha) [![devDependency Status](https://david-dm.org/docdis/learn-mocha/dev-status.svg)](https://david-dm.org/docdis/learn-mocha#info=devDependencies)
+Learn Mocha [![Build Status](https://travis-ci.org/jce-il/learn-mocha.png?branch=master)](https://travis-ci.org/jce-il/learn-mocha) [![Test Coverage](https://codeclimate.com/github/jce-il/learn-mocha/badges/coverage.svg)](https://codeclimate.com/github/jce-il/learn-mocha/coverage) [![Code Climate](https://codeclimate.com/github/jce-il/learn-mocha.png)](https://codeclimate.com/github/jce-il/learn-mocha) [![devDependency Status](https://david-dm.org/jce-il/learn-mocha/dev-status.svg)](https://david-dm.org/jce-il/learn-mocha#info=devDependencies)
 ===========
 
-*Quick Guide* to **mocha.js** Test Driven Development (TDD) in **node.js**
+*Quick Guide* to **mocha.js**: Test Driven Development (TDD) in **node.js**
 
 > **Note**: This tutorial is an intro to Testing with Mocha. It is a fork of [https://github.com/dwyl/**learn-mocha**](https://github.com/dwyl/learn-mocha) adapted as an excercise for a software [engineering course](https://github.com/jce-il/se-class/wiki).
 
@@ -411,7 +411,7 @@ https://github.com/dwyl/learn-travis
 
 ![Travis Enabled](https://raw.github.com/jce-il/learn-mocha/master/images/travis-on.png "Travis Enabled")
 
-Done. [![Travis Build Status](https://travis-ci.org/jce-il/learn-mocha.svg)](https://travis-ci.org/docdis/learn-mocha)
+Done. [![Travis Build Status](https://travis-ci.org/jce-il/learn-mocha.svg)](https://travis-ci.org/jce-il/learn-mocha)
 
 - - -
 
