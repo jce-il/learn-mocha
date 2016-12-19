@@ -1,7 +1,7 @@
 Learn Mocha [![Build Status](https://travis-ci.org/jce-il/learn-mocha.png?branch=master)](https://travis-ci.org/jce-il/learn-mocha) [![Test Coverage](https://codeclimate.com/github/jce-il/learn-mocha/badges/coverage.svg)](https://codeclimate.com/github/jce-il/learn-mocha/coverage) [![Code Climate](https://codeclimate.com/github/jce-il/learn-mocha.png)](https://codeclimate.com/github/jce-il/learn-mocha) [![devDependency Status](https://david-dm.org/jce-il/learn-mocha/dev-status.svg)](https://david-dm.org/jce-il/learn-mocha#info=devDependencies)
 ===========
 
-*Quick Guide* to **mocha.js**: Test Driven Development (TDD) in **node.js**
+*A Quick Guide* to **mocha.js**: Test Driven Development (TDD) in **node.js** and other Continuous Integration (CI) Tools
 
 > **Note**: This tutorial is an intro to Testing with Mocha. It is a fork of [https://github.com/dwyl/**learn-mocha**](https://github.com/dwyl/learn-mocha) adapted as an excercise for a software [engineering course](https://github.com/jce-il/se-class/wiki).
 
@@ -64,7 +64,7 @@ will look for a **/test** directory and run any **.js** files it contains:
 mocha
 ```
 
-You should see a failure message, since no tests were found.
+You should see a failure message, since no tests were found (this is actually a very first failing/RED phase).
 
 ![Mocha 0 Test Run](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-0-test-failure.png "Mocha 0 Test Run")
 
@@ -188,6 +188,8 @@ We haven't created the file yet so test.js is requesting a non-existent file!
 > **A**: To get used to the idea of *only* writing the code required to *pass*
 >    the *current* (*failing*) *test*.
 
+For the sake of this tutorial this is already a failure which shoud be documented as a failure step.
+
 ![RED](https://raw.github.com/jce-il/learn-mocha/master/images/red-circle-icon.png "RED")
 
 #### Create the Module File
@@ -260,7 +262,7 @@ dfference    =  90         // 90p
 change       = [50,20,20]  // 50p, 20p, 20p
 ```
 
-Add the following test to ./test/**test.js**:
+Add the following test to ./test/**test.js** (indise the inner describe function):
 
 ```javascript
 it('getChange(210,300) should equal [50,20,20]', function(){
@@ -334,9 +336,9 @@ The *Arthur Andersen Approach* gets results:
 
 ![Mocha 3 Passing](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-3-passing.png "Mocha 3 Passing")
 
-![GREEN](https://raw.github.com/jce-il/learn-mocha/master/images/green-circle-icon.png "GREEN")
 
-But its arguably *more work* than simply *solving* the problem.
+But its arguably *more work* than simply *solving* the problem (so we won't even commit this solution!)
+.
 Lets do that instead.
 (**Note**: this is the *readable* version of the solution! feel free to suggest a more compact algorithm)
 
@@ -364,9 +366,10 @@ C.getChange = function (totalPayable, cashPaid) {
     return change;
 };
 ```
-![REFACTOR](https://raw.github.com/jce-il/learn-mocha/master/images/blue-circle-icon.png "REFACTOR")
 
-Add one more test to ensure we are *fully* exercising our method:
+![GREEN](https://raw.github.com/jce-il/learn-mocha/master/images/green-circle-icon.png "GREEN")
+
+Add one more test to ensure we are *fully* exercising our method, especially if you also suggested a different implementation:
 
 ```
 totalPayable = 1487                                 // £14.87  (fourteen pounds and eighty-seven pence)
@@ -385,9 +388,9 @@ it('getChange(1487,10000) should equal [5000, 2000, 1000, 500, 10, 2, 1 ]', func
 
 ![GREEN](https://raw.github.com/jce-il/learn-mocha/master/images/green-circle-icon.png "GREEN")
 
-#### Test readability
+#### Test Code Refactoring
 
-Our tests are also code and are starting to get messy, suggest an improvement to the test code (comments, meaningful names, separating into classes of inputs, etc.)
+Our tests are also code and are starting to get messy, suggest an improvement to the test code (comments, meaningful names, remove redundant tests, separating into classes of inputs, etc.)
 
 ![REFACTOR](https://raw.github.com/jce-il/learn-mocha/master/images/blue-circle-icon.png "REFACTOR")
 
@@ -396,7 +399,7 @@ Our tests are also code and are starting to get messy, suggest an improvement to
 #### Code Coverage
 
 We are using istanbul for code coverage.
-If you are new to istanbul check out the brief tutorial:
+For more details concerning istanbul check out the other brief tutorial:
 https://github.com/dwyl/learn-istanbul
 
 Install istanbul:
@@ -413,18 +416,19 @@ You should see:
 
 ![Istanbul Coverage](https://raw.github.com/jce-il/learn-mocha/master/images/istanbul-cover-mocha.png "Istanbul Code Coverage")
 
-or if you prefer the **lcov-report**:
+or if you prefer the **lcov-report** (open index.html file at coverege/lcov-report):
 
 ![Istanbul Coverage Report](https://raw.github.com/jce-il/learn-mocha/master/images/istanbul-coverage-report.png "Istanbul Code Coverage Report")
 
 > **100% Coverage** for Statements, Branches, Functions and Lines.
 
-Commit the report, also.
+Commit the report, as weel.
+
 ![REFACTOR](https://raw.github.com/jce-il/learn-mocha/master/images/blue-circle-icon.png "REFACTOR")
 
 #### Continuous Integration with Travis
 
-If you are new to Travis CI check out my tutorial:
+For more details concerning Travis CI check out the tutorial:
 https://github.com/dwyl/learn-travis
 
 > Visit: https://travis-ci.org/profile
@@ -434,11 +438,23 @@ https://github.com/dwyl/learn-travis
 
 There are other tool that can be chained, see for example the badges in the begining of this page.
 
-Update the link below, to point to ypur repository.
+Update the link below in the README file, to point to **your** repository status.
 [![Travis Build Status](https://travis-ci.org/jce-il/learn-mocha.svg)](https://travis-ci.org/jce-il/learn-mocha)
+
+![REFACTOR](https://raw.github.com/jce-il/learn-mocha/master/images/blue-circle-icon.png "REFACTOR")
+
 
 #### Pull request
 
+Finally, use the github interface of your oen fork to open a pull request to the original tutorial repository. Since the original also has travis defined, your request will be automaticall checked to being covered by tests!
+
+#### Submission
+
+Push all your step commits back to github
+
+```sh
+git push
+```
 
 Done.
 
