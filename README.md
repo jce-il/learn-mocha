@@ -9,8 +9,9 @@ For students: follow these steps:
 - Fork your own copy of this toutorial (using the classroom invitation)
 - Clone localy
 - Follow this tutorial, while commiting your work right after every step.
-- In the commit messages use a prefix of "RED", "GREEN", or "REFACTOR" according to the step, e.g. "RED:a failing test for missing module
-- There are colored circle hints following the various steps - ![RED](https://raw.github.com/jce-il/learn-mocha/master/images/red-circle-icon.png "RED") ![GREEN](https://raw.github.com/jce-il/learn-mocha/master/images/green-circle-icon.png "GREEN") ![REFACTOR](https://raw.github.com/jce-il/learn-mocha/master/images/blue-circle-icon.png "REFACTOR")
+- In the commit messages use a prefix of "RED", "GREEN", or "REFACTOR" according to the step, e.g. "RED:a failing test for a missing module"
+- There are colored circle hints following the various steps:
+![RED](https://raw.github.com/jce-il/learn-mocha/master/images/red-circle-icon.png "RED") ![GREEN](https://raw.github.com/jce-il/learn-mocha/master/images/green-circle-icon.png "GREEN") ![REFACTOR](https://raw.github.com/jce-il/learn-mocha/master/images/blue-circle-icon.png "REFACTOR")
 - Finally, push your commits back to your github repository
 
 If you are looking for a more _detailed_ **T**est **D**riven **D**evelopment (**TDD**) Tutorial see: [https://github.com/dwyl/**learn-tdd**](https://github.com/dwyl/learn-tdd)
@@ -31,10 +32,16 @@ everything starts breaking ... "*it was working this morning*" ...
 
 ## Installation
 
-Assuming you're in a new directory
+Assuming you're in the farked directory
 
 ```sh
 npm install mocha -g --save-dev
+```
+
+Alterntively, you can install mocha just for your project, by:
+
+```sh
+npm install
 ```
 
 You should see some output *confirming* it *installed*:
@@ -47,6 +54,20 @@ More info: http://mochajs.org/#installation
 > see: http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo
 
 ### First Tests
+
+#### Try Running Tests
+
+By typing the command **mocha** in your terminal (or 'npm test' for te local option) the mocha comand line program
+will look for a **/test** directory and run any **.js** files it contains:
+
+```sh
+mocha
+```
+
+You should see a failure message, since no tests were found.
+
+![Mocha 0 Test Run](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-0-test-failure.png "Mocha 0 Test Run")
+
 
 #### Create Test Directory
 
@@ -401,7 +422,7 @@ or if you prefer the **lcov-report**:
 Commit the report, also.
 ![REFACTOR](https://raw.github.com/jce-il/learn-mocha/master/images/blue-circle-icon.png "REFACTOR")
 
-#### Travis
+#### Continuous Integration with Travis
 
 If you are new to Travis CI check out my tutorial:
 https://github.com/dwyl/learn-travis
@@ -411,7 +432,15 @@ https://github.com/dwyl/learn-travis
 
 ![Travis Enabled](https://raw.github.com/jce-il/learn-mocha/master/images/travis-on.png "Travis Enabled")
 
-Done. [![Travis Build Status](https://travis-ci.org/jce-il/learn-mocha.svg)](https://travis-ci.org/jce-il/learn-mocha)
+There are other tool that can be chained, see for example the badges in the begining of this page.
+
+Update the link below, to point to ypur repository.
+[![Travis Build Status](https://travis-ci.org/jce-il/learn-mocha.svg)](https://travis-ci.org/jce-il/learn-mocha)
+
+#### Pull request
+
+
+Done.
 
 - - -
 
