@@ -1,4 +1,4 @@
-Learn Mocha [![Build Status](https://travis-ci.org/jce-il/learn-mocha.png?branch=master)](https://travis-ci.org/jce-il/learn-mocha) [![Test Coverage](https://codeclimate.com/github/jce-il/learn-mocha/badges/coverage.svg)](https://codeclimate.com/github/jce-il/learn-mocha/coverage) [![Code Climate](https://codeclimate.com/github/jce-il/learn-mocha.png)](https://codeclimate.com/github/jce-il/learn-mocha) [![devDependency Status](https://david-dm.org/jce-il/learn-mocha/dev-status.svg)](https://david-dm.org/jce-il/learn-mocha#info=devDependencies)
+Learn Mocha [![Build Status](https://travis-ci.org/jce-il/learn-mocha.png?branch=master)](https://travis-ci.org/jce-il/learn-mocha) [![Test Coverage](https://codeclimate.com/github/jce-il/learn-mocha/badges/coverage.svg)](https://codeclimate.com/github/jce-il/learn-mocha/coverage) [![Code Climate](https://codeclimate.com/github/jce-il/learn-mocha.png)](https://codeclimate.com/github/jce-il/learn-mocha) [![Issue Count](https://codeclimate.com/github/jce-il/learn-mocha/badges/issue_count.svg)](https://codeclimate.com/github/jce-il/learn-mocha) [![devDependencies Status](https://david-dm.org/jce-il/learn-mocha/dev-status.svg)](https://david-dm.org/jce-il/learn-mocha?type=dev)
 ===========
 
 *A Quick Guide* to **mocha.js**: Test Driven Development (TDD) in **node.js** and other Continuous Integration (CI) Tools
@@ -422,7 +422,7 @@ or if you prefer the **lcov-report** (open index.html file at coverege/lcov-repo
 
 > **100% Coverage** for Statements, Branches, Functions and Lines.
 
-Commit the report, as weel.
+Commit the report, as well.
 
 ![REFACTOR](https://raw.github.com/jce-il/learn-mocha/master/images/blue-circle-icon.png "REFACTOR")
 
